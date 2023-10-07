@@ -1,9 +1,11 @@
 import pygame
 import sys
-import math
 import random
 from Pantalla_Carga import Pantalla_Carga, Seleccion_Planeta
+from Pantalla_Menu import Pantalla_Menu
 from Pantalla_Planeta import Pantalla_Planetas
+from Pantalla_Menu_Marte import Mostrar_Menu_Marte
+
 # Inicializa Pygame
 pygame.init()
 
@@ -20,9 +22,10 @@ BLACK = (0, 0, 0)
 font = pygame.font.Font(None, 36)
 
 #Variables para estado de la aplicacion
-Pantalla_Planeta = 0
+Estado_Carga = 0
 Estado_Menu = 1
-Estado_Actual = Pantalla_Planeta
+Estado_Marte = 2
+Estado_Actual = Estado_Marte
 
 def Pantalla_Menu():
     # Estrellas de fondo
@@ -40,16 +43,18 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    if Estado_Actual == Pantalla_Planeta:
-        Pantalla_Planetas(screen, font)  # Pasa la pantalla y la fuente como argumentos
-        Estado_Actual = 3
+    if Estado_Actual == Estado_Carga:
+        Pantalla_Carga(screen, font)  #Pasa la pantalla y la fuente como argumentos
+        Estado_Actual = Estado_Menu
 
     elif Estado_Actual == Estado_Menu:
         Pantalla_Menu()
-        Estado_Actual = 5
+        Estado_Actual = Estado_Marte
     
+    elif Estado_Actual == Estado_Marte:
+        Mostrar_Menu_Marte()
+        Estado_Actual =5
     # Coloca aquí la lógica y el renderizado de tu aplicación principal
-
     pygame.display.flip()
 
 # Finaliza Pygame
