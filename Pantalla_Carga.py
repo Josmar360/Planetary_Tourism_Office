@@ -1,34 +1,34 @@
 import pygame
 import random
 import math
-from PIL import Image
 import os
 
+directorio_imagenes = "Recursos_Visuales"
+
 def Seleccion_Planeta():
-    #case = random.randint(0, 10)
-    case = 0
+    case = random.randint(0, 10)
     if (case == 0):
-        Planeta = "Recursos_Visuales\Sol.png"
+        Planeta = os.path.join(directorio_imagenes, "Sol.png")
     elif (case == 1):
-        Planeta = "Mercurio.png"
+        Planeta = os.path.join(directorio_imagenes, "Mercurio.png")
     elif (case == 2):
-        Planeta = "Venus.png"
+        Planeta = os.path.join(directorio_imagenes, "Venus.png")
     elif (case == 3):
-        Planeta = "Tierra.png"
+        Planeta = os.path.join(directorio_imagenes, "Tierra.png")
     elif (case == 4):
-        Planeta = "Luna.png"
+        Planeta = os.path.join(directorio_imagenes, "Luna.png")
     elif (case == 5):
-        Planeta = "Marte.png"
+        Planeta = os.path.join(directorio_imagenes, "Marte.png")
     elif (case == 6):
-        Planeta = "Jupiter.png"
+        Planeta = os.path.join(directorio_imagenes, "Jupiter.png")
     elif (case == 7):
-        Planeta = "Saturno.png"
+        Planeta = os.path.join(directorio_imagenes, "Saturno.png")
     elif (case == 8):
-        Planeta = "Urano.png"
+        Planeta = os.path.join(directorio_imagenes, "Urano.png")
     elif (case == 9):
-        Planeta = "Neptuno.png"
+        Planeta = os.path.join(directorio_imagenes, "Neptuno.png")
     elif (case == 10):
-        Planeta = "Pluton.png"
+        Planeta = os.path.join(directorio_imagenes, "Pluton.png")
     return Planeta
 
 def Pantalla_Carga(screen, font):
