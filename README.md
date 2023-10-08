@@ -13,7 +13,7 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 1. Instalar python 
 2. Instalar libreria pygame 
     1. pip install pygame
-    2. pip install  cv2
+    2. pip install opencv-python
 
 # Autores
 [Aquiles Piña Olvera Lic Ciencias de la informtica IPN](https://github.com/Aquilespina)
@@ -21,6 +21,20 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 
 
 [Josmar Palomino Castelan  Lic Ciencias de la informtica IPN ](https://github.com/Josmar360)
+
+
+
+[Diana Tamara Panama Sanchez Lic Ciencias de la informtica IPN ](https://github.com/tammy275)
+
+
+
+[Cristian Saúl Rodríguez Ramos   Ing Control y Automatizacion IPN ](https://github.com/saulrodriguezsk)
+
+
+[Cintia Roque Moreno   Biologa  UNAM ](https://github.com/Cintiaroque)
+
+
+
 
 
 
