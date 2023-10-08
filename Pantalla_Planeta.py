@@ -43,4 +43,5 @@ def Pantalla_Planetas(screen, font):
         text_rect = text.get_rect(center=(screen.get_width() // 1.3, y_offset))
         screen.blit(text, text_rect)
         y_offset += text.get_height() + 10  #
+        
 

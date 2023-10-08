@@ -34,32 +34,33 @@ def mostrar_boton(texto, x, y, width, height, color):
 
 
 # Bucle principal
-registrando = True
-while registrando:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            registrando = False
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RETURN:
-                # Cuando se presiona Enter, mostrar ventana de opciones
+def Pantalla_Registro():
+    registrando = True
+    while registrando:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
                 registrando = False
-                opciones = True
-            elif event.key == pygame.K_BACKSPACE:
-                nombre = nombre[:-1]
-                correo = correo[:-1]
-            else:
-                nombre += event.unicode
-                correo += event.unicode
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    # Cuando se presiona Enter, mostrar ventana de opciones
+                    registrando = False
+                    opciones = True
+                elif event.key == pygame.K_BACKSPACE:
+                    nombre = nombre[:-1]
+                    correo = correo[:-1]
+                else:
+                    nombre += event.unicode
+                    correo += event.unicode
 
-    screen.fill(BLACK)
-    mostrar_texto("!LA LUNA Y MARTE MÁS CERCA DE TI!", 150, 50, WHITE)
-    mostrar_texto("Nombre:", 50, 100, WHITE)
-    mostrar_texto(nombre, 100, 100, RED)
-    mostrar_texto("Correo electrónico:", 50, 400, WHITE)
-    mostrar_texto(correo, 50, 450, RED)
-    mostrar_boton("Registrarse", 100, 350, 200, 50, BLUE)
+        screen.fill(BLACK)
+        mostrar_texto("!LA LUNA Y MARTE MÁS CERCA DE TI!", 150, 50, WHITE)
+        mostrar_texto("Nombre:", 50, 100, WHITE)
+        mostrar_texto(nombre, 100, 100, RED)
+        mostrar_texto("Correo electrónico:", 50, 400, WHITE)
+        mostrar_texto(correo, 50, 450, RED)
+        mostrar_boton("Registrarse", 100, 350, 200, 50, BLUE)
 
-    pygame.display.flip()
+        pygame.display.flip()
 
 # Ventana de opciones
 opciones = True
