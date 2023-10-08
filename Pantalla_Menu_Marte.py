@@ -8,10 +8,10 @@ from Pantalla_Marte_Habitat import Pantalla_Habitat
 from Pantalla_Equipo import Pantalla_Equipo
 from Pantalla_Costos import Pantalla_Costos
 
-# Inicializa Pygame
+#Inicializa Pygame
 pygame.init()
 
-# Configura la pantalla
+#Configura la pantalla
 screen_width, screen_height = 1280, 720
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Menú de Selección")
@@ -19,20 +19,20 @@ pygame.display.set_caption("Menú de Selección")
 directorio_imagenes = "Recursos_Visuales"
 Planeta = os.path.join(directorio_imagenes, "Fondo_Marte.png")
 
-# Cargar la imagen de fondo y redimensionarla
+#Carga la imagen de fondo y redimensionarla
 fondo_marte = pygame.image.load(Planeta)
 fondo_marte = pygame.transform.scale(fondo_marte, (screen_width, screen_height))
 
-# Colores
+#Colores que se usan
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GRAY = (249, 133, 63)
 
-# Fuente para el texto
+#Fuente del texto a utilizar
 font = pygame.font.Font(None, 36)
 font1 = pygame.font.Font(None, 60)
 
-# Lista de opciones del menú
+#Lista de opciones del menú
 menu_options = [
     "Información del planeta",
     "Información del Transbordador",
@@ -42,10 +42,10 @@ menu_options = [
     "Salir del menú"
 ]
 
-# Tamaño de los rectángulos de opción
+#Tamaño de los rectángulos de opción
 opcion_width, opcion_height = 470, 50
 
-# Función para mostrar el menú
+#Función para mostrar el menú
 def Pantalla_Menu_Marte():
     while True:
         for event in pygame.event.get():
@@ -57,26 +57,26 @@ def Pantalla_Menu_Marte():
                 for i, opcion in enumerate(menu_options):
                     opcion_rect = pygame.Rect(
                         screen_width - 1250,
-                        200 + i * (opcion_height + 20),  # Espaciado vertical
+                        200 + i * (opcion_height + 20), #Espaciado vertical
                         opcion_width,
                         opcion_height
                     )
                     if opcion_rect.collidepoint(x, y):
                         ejecutar_accion(i)
 
-        # Dibujar el fondo de Marte
+        #Dibuja el fondo de Marte
         screen.blit(fondo_marte, (0, 0))
 
-        # Dibuja el título del menú
+        #Dibuja el título del menú
         titulo = font1.render("Menú de Selección", True, WHITE)
         titulo_rect = titulo.get_rect(center=(screen_width // 2, 50))
         screen.blit(titulo, titulo_rect)
 
-        # Dibuja las opciones del menú en rectángulos
+        #Dibuja las opciones del menú en rectángulos
         for i, opcion in enumerate(menu_options):
             opcion_rect = pygame.Rect(
                 screen_width - 1250,
-                200 + i * (opcion_height + 20),  # Espaciado vertical
+                200 + i * (opcion_height + 20),  #Espaciado vertical
                 opcion_width,
                 opcion_height
             )
@@ -87,7 +87,7 @@ def Pantalla_Menu_Marte():
 
         pygame.display.flip()
 
-# Funciones de acción para cada opción del menú
+#Funciones de acción para cada opción del menú
 def informacion_planeta():
     Pantalla_Carga()
     Pantalla_Marte()
@@ -113,7 +113,7 @@ def salir_del_menu():
     pygame.display.flip()
     sys.exit()
 
-# Asocia las funciones de acción a las opciones del menú
+#Asocia las funciones de acción a las opciones del menú
 acciones_menu = [
     informacion_planeta,
     informacion_transbordador,
@@ -123,7 +123,7 @@ acciones_menu = [
     salir_del_menu
 ]
 
-# Función para ejecutar la acción correspondiente
+#Función para ejecutar la acción correspondiente
 def ejecutar_accion(opcion):
     acciones_menu[opcion]()
 
