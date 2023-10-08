@@ -35,7 +35,7 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 
 
 
-[Octavio Montes de Oca Lic Ciencias de la informtica IPN  ](https://github.com/BrandonOctavioNM)
+[Noyola Montes de oca Brandon OctavioLic Ciencias de la informtica IPN  ](https://github.com/BrandonOctavioNM)
 
 
 # Contribuciones 
