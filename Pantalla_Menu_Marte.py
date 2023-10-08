@@ -1,5 +1,8 @@
 import pygame
 import sys
+import os
+from Pantalla_Carga import Pantalla_Carga
+from Pantalla_Planeta_Marte import Pantalla_Marte
 
 # Inicializa Pygame
 pygame.init()
@@ -9,8 +12,10 @@ screen_width, screen_height = 1280, 720
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Menú de Selección")
 
+directorio_imagenes = "Recursos_Visuales"
 # Cargar la imagen de fondo y redimensionarla
-fondo_marte = pygame.image.load("Fondo_Marte.png")
+Planeta = os.path.join(directorio_imagenes, "Fondo_Marte.png")
+fondo_marte = pygame.image.load(Planeta)
 fondo_marte = pygame.transform.scale(fondo_marte, (screen_width, screen_height))
 
 # Colores
@@ -36,7 +41,7 @@ menu_options = [
 opcion_width, opcion_height = 470, 50
 
 # Función para mostrar el menú
-def mostrar_menu():
+def Pantalla_Menu_Marte():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -79,7 +84,8 @@ def mostrar_menu():
 
 # Funciones de acción para cada opción del menú
 def informacion_planeta():
-    print("Información del planeta")
+    Pantalla_Carga()
+    Pantalla_Marte()
 
 def informacion_transbordador():
     print("Información del Transbordador")
@@ -94,8 +100,8 @@ def informacion_costos():
     print("Información de costos")
 
 def salir_del_menu():
-    pygame.quit()
-    sys.exit()
+    screen.fill((0, 0, 0))
+    pygame.display.flip()
 
 # Asocia las funciones de acción a las opciones del menú
 acciones_menu = [
@@ -112,4 +118,5 @@ def ejecutar_accion(opcion):
     acciones_menu[opcion]()
 
 if __name__ == "__main__":
-    mostrar_menu()
+    Pantalla_Menu_Marte()
+    pygame.display.flip()

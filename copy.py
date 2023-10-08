@@ -1,7 +1,25 @@
 import pygame
-import random
-import math
 import os
+
+# Inicializa Pygame
+pygame.init()
+
+# Configura la pantalla
+screen_width, screen_height = 1280, 720
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("Menú de Selección")
+
+# Cargar la imagen de fondo y redimensionarla
+fondo_marte = pygame.image.load("Fondo_Marte.png")
+fondo_marte = pygame.transform.scale(fondo_marte, (screen_width, screen_height))
+
+# Colores
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GRAY = (249, 133, 63)
+
+# Fuente para el texto
+font = pygame.font.Font(None, 36)
 
 directorio_imagenes = "Recursos_Visuales"
 
@@ -12,9 +30,9 @@ def Seleccion_Planeta():
         Planeta = os.path.join(directorio_imagenes, "Marte.png")
     return Planeta
 
-def Pantalla_Planetas(screen, font):
+def Pantalla_Planetas():
     imagen = pygame.image.load(Seleccion_Planeta())
-    imagen = pygame.transform.scale(imagen, (400, 400))  # Cambia el tamaño de la imagen si es necesario
+    imagen = pygame.transform.scale(imagen, (1280, 720))  # Cambia el tamaño de la imagen si es necesario
 
     # Calcula las coordenadas para centrar la imagen
     x = (screen.get_width() - imagen.get_width()) // 2

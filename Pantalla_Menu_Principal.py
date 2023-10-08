@@ -119,4 +119,4 @@ def Pantalla_Menu_Principal():
         pygame.display.flip()
 
 def Pantalla_Menu_Principal_Regreso():
-    Pantalla_Menu_Principal()
+    Pantalla_Menu_Principal
