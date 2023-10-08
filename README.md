@@ -17,6 +17,9 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 
 # Autores
 [Aquiles Piña Olvera Lic Ciencias de la informtica IPN](https://github.com/Aquilespina)
+
+
+
 [Josmar Palomino Castelan  Lic Ciencias de la informtica IPN ](https://github.com/Josmar360)
 
 
