@@ -17,7 +17,7 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 # Fuente para el texto
-font = pygame.font.Font(None, 36)
+font = pygame.font.Font(None, 60)
 
 #Variables para estado de la aplicacion
 Estado_Carga = 0
@@ -42,7 +42,7 @@ while running:
             running = False
 
     if Estado_Actual == Estado_Carga:
-        Pantalla_Carga(screen, font)  #Pasa la pantalla y la fuente como argumentos
+        Pantalla_Carga()  #Pasa la pantalla y la fuente como argumentos
         Estado_Actual = Estado_Menu
 
     elif Estado_Actual == Estado_Menu:
@@ -50,8 +50,8 @@ while running:
         Estado_Actual = Estado_Carga2
     
     elif Estado_Actual == Estado_Carga2:
-        Pantalla_Carga(screen, font)
-        Estado_Actual = Estado_Carga #salir opcion
+        Pantalla_Carga()
+        Estado_Actual = 5 #salir opcion
 
     # Coloca aquí la lógica y el renderizado de tu aplicación principal
     pygame.display.flip()

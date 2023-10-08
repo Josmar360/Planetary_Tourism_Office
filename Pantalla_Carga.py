@@ -3,9 +3,10 @@ import random
 import math
 import os
 
-directorio_imagenes = "Recursos_Visuales"
 
 def Seleccion_Planeta():
+    directorio_imagenes = "Recursos_Visuales"
+
     case = random.randint(0, 10)
     if (case == 0):
         Planeta = os.path.join(directorio_imagenes, "Sol.png")
@@ -31,7 +32,19 @@ def Seleccion_Planeta():
         Planeta = os.path.join(directorio_imagenes, "Pluton.png")
     return Planeta
 
-def Pantalla_Carga(screen, font):
+def Pantalla_Carga():
+    # Configura la pantalla
+    screen_width, screen_height = 1280, 720
+    screen = pygame.display.set_mode((screen_width, screen_height))
+    pygame.display.set_caption("Selección de Planetas")
+
+    # Colores
+    WHITE = (255, 255, 255)
+    BLACK = (0, 0, 0)
+
+    # Fuente para el texto
+    font = pygame.font.Font(None, 80)
+
     imagen = pygame.image.load(Seleccion_Planeta())
     imagen = pygame.transform.scale(imagen, (200, 200))  # Cambia el tamaño de la imagen si es necesario
 
