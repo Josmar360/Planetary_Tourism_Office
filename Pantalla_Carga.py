@@ -88,7 +88,7 @@ def Pantalla_Carga():
         pygame.display.flip()
 
         # Controla la velocidad de fotogramas
-        clock.tick(40)  # Puedes ajustar esto para cambiar la velocidad de la animación
+        clock.tick(90)  # Puedes ajustar esto para cambiar la velocidad de la animación
 
         # Simula la carga completada después de un cierto tiempo
         if imagen_rotation_speed >= 360:

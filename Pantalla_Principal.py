@@ -3,6 +3,7 @@ import sys
 import random
 from Pantalla_Carga import Pantalla_Carga
 from Pantalla_Menu_Principal import Pantalla_Menu_Principal
+from Pantalla_Portada import Tierra_3D
 
 # Inicializa Pygame
 pygame.init()
@@ -21,9 +22,10 @@ font = pygame.font.Font(None, 60)
 
 #Variables para estado de la aplicacion
 Estado_Carga = 0
-Estado_Menu = 9
-Estado_Carga2 = 2
-Estado_Actual = Estado_Carga
+Estado_Portada = 1
+Estado_Menu = 2
+Estado_Carga2 = 3
+Estado_Actual = Estado_Portada
 
 def Pantalla_Menu():
     # Estrellas de fondo
@@ -41,7 +43,11 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    if Estado_Actual == Estado_Carga:
+    if Estado_Actual == Estado_Portada:
+        Tierra_3D()
+        Estado_Actual = Estado_Carga
+
+    elif Estado_Actual == Estado_Carga:
         Pantalla_Carga()  #Pasa la pantalla y la fuente como argumentos
         Estado_Actual = Estado_Menu
 

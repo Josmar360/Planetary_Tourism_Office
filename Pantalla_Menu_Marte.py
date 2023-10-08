@@ -3,6 +3,10 @@ import sys
 import os
 from Pantalla_Carga import Pantalla_Carga
 from Pantalla_Planeta_Marte import Pantalla_Marte
+from Pantalla_Transbordador import Pantalla_Nave
+from Pantalla_Marte_Habitat import Pantalla_Habitat
+from Pantalla_Equipo import Pantalla_Equipo
+from Pantalla_Costos import Pantalla_Costos
 
 # Inicializa Pygame
 pygame.init()
@@ -89,20 +93,25 @@ def informacion_planeta():
     Pantalla_Marte()
 
 def informacion_transbordador():
-    print("Información del Transbordador")
+    Pantalla_Carga()
+    Pantalla_Nave()
 
 def informacion_habitat():
-    print("Información del hábitat")
+    Pantalla_Carga()
+    Pantalla_Habitat()
 
 def informacion_equipo_acompanante():
-    print("Información del equipo acompañante")
+    Pantalla_Carga()
+    Pantalla_Equipo()
 
 def informacion_costos():
-    print("Información de costos")
+    Pantalla_Carga()
+    Pantalla_Costos()
 
 def salir_del_menu():
     screen.fill((0, 0, 0))
     pygame.display.flip()
+    sys.exit()
 
 # Asocia las funciones de acción a las opciones del menú
 acciones_menu = [
