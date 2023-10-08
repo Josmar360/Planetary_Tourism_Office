@@ -13,8 +13,9 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Menú de Selección")
 
 directorio_imagenes = "Recursos_Visuales"
-# Cargar la imagen de fondo y redimensionarla
 Planeta = os.path.join(directorio_imagenes, "Fondo_Marte.png")
+
+# Cargar la imagen de fondo y redimensionarla
 fondo_marte = pygame.image.load(Planeta)
 fondo_marte = pygame.transform.scale(fondo_marte, (screen_width, screen_height))
 

@@ -1,8 +1,12 @@
 import pygame
 import sys
+import os
 
 # Inicializar Pygame
 pygame.init()
+
+directorio_imagenes = "Informacion"
+Planeta = os.path.join(directorio_imagenes, "Planeta_Marte.png")
 
 def Pantalla_Marte():
     # Dimensiones de la ventana
@@ -13,7 +17,7 @@ def Pantalla_Marte():
     pygame.display.set_caption("Imagen de Fondo en Pygame")
 
     # Cargar la imagen de fondo
-    imagen_fondo = pygame.image.load("Planeta_Marte.png")
+    imagen_fondo = pygame.image.load(Planeta)
 
     # Escalar la imagen de fondo para que coincida con las dimensiones de la ventana
     imagen_fondo = pygame.transform.scale(imagen_fondo, (ancho, alto))
@@ -48,5 +52,3 @@ def Pantalla_Marte():
 
         # Actualizar la pantalla
         pygame.display.flip()
-
-Pantalla_Marte()
