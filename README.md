@@ -9,5 +9,18 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 ![Marte 3d](Presentacion/Marte3d.jpeg)
 ![Marte informacion](Presentacion/Habitatmarte.jpeg)
 
+# Como ejecutar la aplicacion 
+1. Instalar python 
+2. Instalar libreria pygame 
+    1. pip install pygame
+    2. pip install  cv2
+
+# Autores
+[Aquiles Piña Olvera Lic Ciencias de la informtica IPN](https://github.com/Aquilespina)
+[Josmar Palomino Castelan  Lic Ciencias de la informtica IPN ](https://github.com/Josmar360)
+
+
+
+
 
 
