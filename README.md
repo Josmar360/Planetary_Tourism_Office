@@ -35,6 +35,11 @@ El siguiente repositorio corresponde a un proyecto desarrollado durante un hacka
 
 
 
+[Octavio Montes de Oca Lic Ciencias de la informtica IPN  ](https://github.com/BrandonOctavioNM)
+
+
+# Contribuciones 
+[Enlace de recursos compartidos](https://docs.google.com/document/d/1AFmSM90XOLLH5FpPl91B1ddmhwUBrxzl/edit?usp=sharing&ouid=103950574731304001606&rtpof=true&sd=true)
 
 
 
